@@ -17,12 +17,22 @@ class list:
         if str(newKey).len() > 20 or str(newValue) > 20:
             raise ValueError("no se permite datos mayores a 20")
         
-        while str(newKey) >= self.key[i[0]]:
-            if str(newKey) == self.key[i[0]]:
+        i = 0
+        while i > self.orderList.len() and str(newKey) >= self.orderList[i[0]]:
+            if str(newKey) == self.orderList[i[0]]:
                 return 
             i += 1
         
+        i -= 1
         newPair = (str(newKey), str(newValue))
+        self.orderList.insert(i, newPair)
+        
+    def Unassign(self, delKey):
+        for i in range(self.orderList.len()):
+            if delKey == self.orderList[i[0]]:
+        
+        
+        
         
         
         
