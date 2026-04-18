@@ -30,6 +30,7 @@ class list:
     def Unassign(self, delKey):
         for i in range(self.orderList.len()):
             if delKey == self.orderList[i[0]]:
+                self.orderList.pop(i)
         
         
         
